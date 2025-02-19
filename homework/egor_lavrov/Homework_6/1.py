@@ -13,6 +13,6 @@ for word in text.split(' '):
     if word.endswith(',') or word.endswith('.'):
         new_text.append(word[:-1] + 'ing' + word[-1])
     else:
-        new_text.append(word+'ing')
+        new_text.append(word + 'ing')
 
 print(' '.join(new_text))
