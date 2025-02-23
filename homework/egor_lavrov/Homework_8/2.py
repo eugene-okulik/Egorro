@@ -9,10 +9,11 @@ def fib(limit=100):
         a, b = b, a + b
         count += 1
 
+
 needed_positions = [5, 200, 1000, 100000]
 count = 1
 
-for number in fib(needed_positions[-1]+1):
+for number in fib(needed_positions[-1] + 1):
     if count in needed_positions:
         print(f'{count}-е число: {number}')
     count += 1
