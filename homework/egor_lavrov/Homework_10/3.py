@@ -21,10 +21,11 @@ def chose_operator(first, second):
         operation = '-'
     elif second > first:
         operation = '/'
+
     def inner(func):
         def wrapper(first=first, second=second, operation=operation):
             return func(first, second, operation)
-        return  wrapper
+        return wrapper
     return inner
 
 
@@ -38,5 +39,6 @@ def calc(first, second, operation):
         return first * second
     elif operation == '/':
         return first / second
+
 
 print(calc())
