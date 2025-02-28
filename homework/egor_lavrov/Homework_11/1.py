@@ -16,7 +16,7 @@ class Book:
               f'Материал страниц: {self.page_material}\n'
               f'ISBN: {self.ISBN}')
         if self.reserved:
-            print(f'Зарезервирована\n')
+            print('Зарезервирована\n')
         else:
             print('')  # Для отделения информации между книгами
 
@@ -24,7 +24,7 @@ class Book:
 class SchoolBook(Book):
 
     def __init__(self, title, author, number_of_pages, page_material, ISBN, presence_of_text, reserved,
-            subject, grade, presence_of_assignment):
+                 subject, grade, presence_of_assignment):
         super().__init__(title, author, number_of_pages, page_material, ISBN, presence_of_text, reserved)
         self.subject = subject
         self.grade = grade
@@ -49,7 +49,7 @@ DFM_02 = Book('Униженные и оскорблённые', 'Достоев�
 PAS_01 = Book('Стихотворения. Поэмы', 'Пушкин Александр Сергеевич', '512',
               'Офсетная бумага', '978-5-04-102518-2', True, True)
 dSEA_01 = Book('Маленький принц и Цитадель', 'де Сент-Экзюпери Антуан', '488',
-              'Офсетная бумага', '978-5-04-173229-5', True, False)
+               'Офсетная бумага', '978-5-04-173229-5', True, False)
 BIG_01 = Book('Что? Зачем? Почему?', 'Барановская Ирина Геннадьевна', '256',
               'Мелованная бумага', '978-5-17-094259-6', True, False)
 
