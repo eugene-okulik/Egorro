@@ -47,6 +47,7 @@ class Bouquet(Flower):
         else:
             print('Таких цветов нет.')
 
+
 class Rose(Flower):
 
     def __init__(self, name, color, freshness, stem_length, cost):
@@ -93,17 +94,11 @@ LimoniumSinuatum_Bl = LimoniumSinuatum('Статица',
                                        'Синий', 20, 60, 450)
 
 Bouquet_Gentle_spring = Bouquet('Нежная весна',
-                                [Alstroemeria_Pelegrina,
-                                Eustoma_Super_magic_Lilac,
-                                Lilium_Candidum])
+                                [Alstroemeria_Pelegrina, Eustoma_Super_magic_Lilac, Lilium_Candidum])
 Bouquet_Impression = Bouquet('Впечатление',
-                             [Rose_Candlelight_Cr,
-                             Alstroemeria_Pelegrina,
-                             Eustoma_Super_magic_Lilac])
+                             [Rose_Candlelight_Cr, Alstroemeria_Pelegrina, Eustoma_Super_magic_Lilac])
 Bouquet_Сourage = Bouquet('Смелость',
-                          [Rose_Candlelight_Cr,
-                          Chrysanthemum_Carinatum,
-                          LimoniumSinuatum_Bl])
+                          [Rose_Candlelight_Cr, Chrysanthemum_Carinatum, LimoniumSinuatum_Bl])
 
 print(f'Букет "{Bouquet_Impression.name}" стоит {Bouquet_Impression.price()} руб.')
 print(f'Букет "{Bouquet_Impression.name}" сможет простоять около {Bouquet_Impression.life_time()} дней')
