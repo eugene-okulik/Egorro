@@ -24,7 +24,7 @@ class Bouquet(Flower):
         sum_times = 0
         for flower in self.content:
             sum_times += flower.freshness
-        return sum_times//len(self.content)
+        return sum_times // len(self.content)
 
     def sort_by(self, attr):
         print(f'\nБукет "{self.name}", сортировка по {attr}:')
@@ -45,7 +45,7 @@ class Bouquet(Flower):
             for item in filtered_dictionary.items():
                 print(*item, sep=': ')
         else:
-                print('Таких цветов нет.')
+            print('Таких цветов нет.')
 
 class Rose(Flower):
 
@@ -80,7 +80,7 @@ class LimoniumSinuatum(Flower):
 
 
 Rose_Candlelight_Cr = Rose('Роза Канделайт',
-                           'Кремовый',5,60,500)
+                           'Кремовый', 5, 60, 500)
 Lilium_Candidum = Lilium('Лилиля Белоснежная',
                          'Белый', 7, 80, 750)
 Alstroemeria_Pelegrina = Alstroemeria('Альстромерия Пелегрина',
@@ -94,16 +94,16 @@ LimoniumSinuatum_Bl = LimoniumSinuatum('Статица',
 
 Bouquet_Gentle_spring = Bouquet('Нежная весна',
                                 [Alstroemeria_Pelegrina,
-                                        Eustoma_Super_magic_Lilac,
-                                        Lilium_Candidum])
+                                Eustoma_Super_magic_Lilac,
+                                Lilium_Candidum])
 Bouquet_Impression = Bouquet('Впечатление',
                              [Rose_Candlelight_Cr,
-                                     Alstroemeria_Pelegrina,
-                                     Eustoma_Super_magic_Lilac])
+                             Alstroemeria_Pelegrina,
+                             Eustoma_Super_magic_Lilac])
 Bouquet_Сourage = Bouquet('Смелость',
                           [Rose_Candlelight_Cr,
-                                  Chrysanthemum_Carinatum,
-                                  LimoniumSinuatum_Bl])
+                          Chrysanthemum_Carinatum,
+                          LimoniumSinuatum_Bl])
 
 print(f'Букет "{Bouquet_Impression.name}" стоит {Bouquet_Impression.price()} руб.')
 print(f'Букет "{Bouquet_Impression.name}" сможет простоять около {Bouquet_Impression.life_time()} дней')
