@@ -1,11 +1,15 @@
-INSERT INTO students (name, second_name, group_id)
-VALUES ('Barry', 'Allen', 3071)
+INSERT INTO students (name, second_name)
+VALUES ('Barry', 'Allen')
 
 INSERT INTO books (title, taken_by_student_id)
 VALUES ('Star Wars. Episode I. The Phantom Menace', 4770), ('Who is the Flash?', 4770)
 
 INSERT INTO `groups` (title)
 VALUES ('STAR Labs')
+
+UPDATE students s
+SET group_id  = 3071
+WHERE id = 4770
 
 INSERT INTO subjets (title)
 VALUES ('Logic'), ('Piano')
@@ -22,6 +26,7 @@ VALUES
 (4, 9112, 4770),
 (4, 9113, 4770),
 (5, 9114, 4770)
+
 
 SELECT value
 FROM marks
