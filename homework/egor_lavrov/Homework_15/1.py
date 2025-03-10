@@ -24,7 +24,7 @@ INSERT INTO books (title, taken_by_student_id)
 VALUES (%s, %s)
 """
 cursor.executemany(
-    query,[
+    query, [
         ('Star Wars. Episode I: The Phantom Menace', student_id),
         ('Who is the Flash?', student_id)
     ]
@@ -95,7 +95,7 @@ cursor.execute(query, [subject_piano_id])
 lesson_piano_02_id = cursor.lastrowid
 
 
-query = f"""
+query = """
 INSERT INTO marks (value, lesson_id, student_id)
 VALUES (%s, %s, %s)
 """
