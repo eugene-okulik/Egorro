@@ -65,4 +65,3 @@ for row in data:
         print('\nВ базе данных отсутствует запись:')
         for key in row:
             print(f'{key} : {row[key]}')
-            
