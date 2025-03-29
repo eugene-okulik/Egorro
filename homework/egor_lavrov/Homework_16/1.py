@@ -62,7 +62,7 @@ for row in data:
     result = cursor.fetchall()
 
     if result == []:
-        print(f'\nВ базе данных отсутствует запись:')
+        print('\nВ базе данных отсутствует запись:')
         for key in row:
             print(f'{key} : {row[key]}')
             
