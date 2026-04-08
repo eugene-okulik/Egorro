@@ -5,12 +5,13 @@ from colorama import init, Fore, Style
 
 init(autoreset=True)
 
-logs_folder_path = input(f'Укажите полный путь к папке с логами:\n')
-text_to_search = input(f'Какой текст нужно найти?\n')
+logs_folder_path = input('Укажите полный путь к папке с логами:\n')
+text_to_search = input('Какой текст нужно найти?\n')
 list_of_log_files = os.listdir(logs_folder_path)
 count = 0
 print(f'Папка с логами:\n{logs_folder_path}\n')
 print(f'Файлов в папке: {len(list_of_log_files)}\n')
+
 
 # Делим файл на блоки и создаём из них словарь
 def make_dict(text):
@@ -21,6 +22,7 @@ def make_dict(text):
     del dict_values[0]
     return dict(zip(dist_keys, dict_values))
 
+
 # Определяем сколько слов будем печатать до и после искомого слова
 def delta_index(index):
     if index < 5:
@@ -28,7 +30,8 @@ def delta_index(index):
     else:
         return index - 5, index, index + 6
 
-#
+
+# Ищем слово и печатаем нужный отрезок
 def find_the_word(word, dictionary):
     global count
     for item in dictionary.items():
@@ -39,11 +42,13 @@ def find_the_word(word, dictionary):
             index = newlist.index(word)
             finallist = ' '.join(newlist[(delta_index(index)[0]):(delta_index(index)[2])])
             print(key)
-            print(f'{finallist[:finallist.index(word) - 1]} {Fore.RED}{word}{Style.RESET_ALL}{finallist[finallist.index(word) + len(word):150]}\n')
-
+            print(f'{finallist[:finallist.index(word) - 1]} '
+                  f'{Fore.RED}{word}{Style.RESET_ALL}'
+                  f'{finallist[finallist.index(word) + len(word):150]}\n')
         except ValueError:
             pass
         count += 1
+
 
 for file in list_of_log_files:
     print('Файл ' + Fore.GREEN + file)
