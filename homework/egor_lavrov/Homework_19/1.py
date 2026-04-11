@@ -46,8 +46,8 @@ def put_the_post():
                      "size": "small"}}
     headers = {"Content-Type": "application/json"}
     response = requests.put(f'http://objapi.course.qa-practice.com/object/{post_id}',
-                             json=body,
-                             headers=headers)
+                            json=body,
+                            headers=headers)
     assert response.status_code == 200, 'Wrong status code'
     assert response.json()['id'] == str(post_id), 'Wrong id'
     assert response.json()['name'] == 'My updated object', 'Wrong name'
@@ -63,8 +63,8 @@ def patch_the_post():
                      "size": "small"}}
     headers = {"Content-Type": "application/json"}
     response = requests.patch(f'http://objapi.course.qa-practice.com/object/{post_id}',
-                             json=body,
-                             headers=headers)
+                              json=body,
+                              headers=headers)
     assert response.status_code == 200, 'Wrong status code'
     assert response.json()['id'] == post_id, 'Wrong id'
     assert response.json()['data']['color'] == 'yellow', 'Wrong color'
