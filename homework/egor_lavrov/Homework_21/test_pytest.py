@@ -38,8 +38,8 @@ def test_api_add_post(body):
         headers = {"Content-Type": "application/json"}
     with allure.step('Отправка запроса на создание объекта'):
         response = requests.post('http://objapi.course.qa-practice.com/object',
-                             json=body,
-                             headers=headers)
+                                 json=body,
+                                 headers=headers)
     with allure.step('Проверка, что получаем статус код 200'):
         assert response.status_code == 200, 'Wrong status code'
     with allure.step('Параметр "Name" нового объекта соответствует запросу'):
@@ -61,17 +61,17 @@ def test_api_put_the_post(new_post_id):
         headers = {"Content-Type": "application/json"}
     with allure.step(f'Отправка запроса на изменение объекта с ID {new_post_id}'):
         response = requests.put(f'http://objapi.course.qa-practice.com/object/{new_post_id}',
-                            json=body,
-                            headers=headers)
+                                json=body,
+                                headers=headers)
     with allure.step('Проверка, что получаем статус код 200'):
         assert response.status_code == 200, 'Wrong status code'
     with allure.step(f'ID изменённого объекта равен {new_post_id}'):
         assert response.json()['id'] == str(new_post_id), 'Wrong id'
-    with allure.step(f'Параметр "Name" изменился корректно'):
+    with allure.step('Параметр "Name" изменился корректно'):
         assert response.json()['name'] == 'My updated object', 'Wrong name'
-    with allure.step(f'Параметр "Color" изменился корректно'):
+    with allure.step('Параметр "Color" изменился корректно'):
         assert response.json()['data']['color'] == 'blue', 'Wrong color'
-    with allure.step(f'Параметр "Size" изменился корректно'):
+    with allure.step('Параметр "Size" изменился корректно'):
         assert response.json()['data']['size'] == 'small', 'Wrong size'
 
 
@@ -86,13 +86,13 @@ def test_api_patch_the_post(new_post_id):
         headers = {"Content-Type": "application/json"}
     with allure.step(f'Отправка запроса на изменение объекта с ID {new_post_id}'):
         response = requests.patch(f'http://objapi.course.qa-practice.com/object/{new_post_id}',
-                              json=body,
-                              headers=headers)
+                                  json=body,
+                                  headers=headers)
     with allure.step('Проверка, что получаем статус код 200'):
         assert response.status_code == 200, 'Wrong status code'
     with allure.step(f'ID изменённого объекта равен {new_post_id}'):
         assert response.json()['id'] == new_post_id, 'Wrong id'
-    with allure.step(f'Параметр "Color" изменился корректно'):
+    with allure.step('Параметр "Color" изменился корректно'):
         assert response.json()['data']['color'] == 'yellow', 'Wrong color'
 
 
