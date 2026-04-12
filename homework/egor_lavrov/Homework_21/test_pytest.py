@@ -2,8 +2,6 @@ import requests
 import pytest
 import allure
 
-
-
 @allure.title('Получение всех объектов')
 @allure.feature('Метод GET')
 @allure.story('Получение объекта')
@@ -56,8 +54,8 @@ def test_api_add_post(body):
 def test_api_put_the_post(new_post_id):
     with allure.step('Подготовка тестовых данных для запроса'):
         body = {"name": "My updated object",
-            "data": {"color": "blue",
-                     "size": "small"}}
+                "data": {"color": "blue",
+                         "size": "small"}}
         headers = {"Content-Type": "application/json"}
     with allure.step(f'Отправка запроса на изменение объекта с ID {new_post_id}'):
         response = requests.put(f'http://objapi.course.qa-practice.com/object/{new_post_id}',
