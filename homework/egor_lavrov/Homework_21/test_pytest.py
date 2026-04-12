@@ -2,6 +2,7 @@ import requests
 import pytest
 import allure
 
+
 @allure.title('Получение всех объектов')
 @allure.feature('Метод GET')
 @allure.story('Получение объекта')

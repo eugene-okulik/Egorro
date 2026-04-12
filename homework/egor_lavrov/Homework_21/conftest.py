@@ -2,7 +2,6 @@ import requests
 import pytest
 
 
-
 @pytest.fixture(autouse=True, scope='session')
 def start_complete_text():
     print('\nStart testing')
