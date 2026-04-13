@@ -51,4 +51,3 @@ def test_api_patch_object(patch_object_endpoint, new_post_id):
 def test_api_delete_object(delete_object_endpoint, new_post_id):
     delete_object_endpoint.delete_object(object_id=new_post_id)
     delete_object_endpoint.assert_status_code_is(200)
-    
