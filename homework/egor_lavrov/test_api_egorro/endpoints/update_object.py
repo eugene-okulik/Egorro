@@ -3,10 +3,7 @@ import allure
 from endpoints.endpoint import Endpoint
 
 
-
-
 class PutObject(Endpoint):
-
 
     @allure.step('Update object')
     def put_object(self, object_id, payload, headers=None):

@@ -3,10 +3,7 @@ import allure
 from endpoints.endpoint import Endpoint
 
 
-
-
 class GetObject(Endpoint):
-
 
     @allure.step('Get object')
     def get_object(self, object_id=None, headers=None):

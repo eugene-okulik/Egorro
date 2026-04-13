@@ -3,10 +3,7 @@ import allure
 from endpoints.endpoint import Endpoint
 
 
-
-
 class PostObject(Endpoint):
-
 
     @allure.step('Create new object')
     def post_object(self, payload, headers=None):

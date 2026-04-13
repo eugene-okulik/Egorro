@@ -3,10 +3,7 @@ import allure
 from endpoints.endpoint import Endpoint
 
 
-
-
 class PatchObject(Endpoint):
-
 
     @allure.step('Patch object')
     def patch_object(self, object_id, payload, headers=None):

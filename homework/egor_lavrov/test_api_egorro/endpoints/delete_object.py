@@ -3,10 +3,7 @@ import allure
 from endpoints.endpoint import Endpoint
 
 
-
-
 class DeleteObject(Endpoint):
-
 
     @allure.step('Delete object')
     def delete_object(self, object_id, headers=None):

@@ -40,7 +40,7 @@ def test_api_update_object(put_object_endpoint, new_post_id, payload):
 
 def test_api_patch_object(patch_object_endpoint, new_post_id):
     payload = {"name": "My updated object",
-            "data": {"color": "yellow"}
+               "data": {"color": "yellow"}
                }
     patch_object_endpoint.patch_object(object_id=new_post_id, payload=payload)
     patch_object_endpoint.assert_status_code_is(200)
