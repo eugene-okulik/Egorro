@@ -33,7 +33,7 @@ def delete_object_endpoint():
 
 
 @pytest.fixture()
-def new_post_id(post_object_endpoint, delete_object_endpoint, get_object_endpoint):
+def new_post_id(post_object_endpoint, delete_object_endpoint):
     payload = {"name": "My object",
                "data": {"color": "red",
                         "size": "medium"}}

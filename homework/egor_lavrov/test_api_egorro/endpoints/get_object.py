@@ -13,4 +13,5 @@ class GetObject(Endpoint):
         else:
             self.response = requests.get(self.url, headers=headers)
         self.json = self.response.json()
+        print(self.json)
         return self.response
