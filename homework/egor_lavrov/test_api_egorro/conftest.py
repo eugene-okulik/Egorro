@@ -35,8 +35,8 @@ def delete_object_endpoint():
 @pytest.fixture()
 def new_post_id(post_object_endpoint, delete_object_endpoint, get_object_endpoint):
     payload = {"name": "My object",
-            "data": {"color": "red",
-                     "size": "medium"}}
+               "data": {"color": "red",
+                        "size": "medium"}}
     post_id = post_object_endpoint.post_object(payload=payload).json()['id']
     yield post_id
     delete_object_endpoint.delete_object(post_id)

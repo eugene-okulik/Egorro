@@ -8,7 +8,6 @@ class Endpoint:
     post_id = None
     headers = {"Content-Type": "application/json"}
 
-
     @allure.step('Check response status code')
     def assert_status_code_is(self, code):
         assert self.response.status_code == code, 'Wrong status code'
